@@ -10,7 +10,7 @@ def index():
     if request.method == "POST": # Eğer bir post olduysa
         githubname = request.form.get("githubname") # Kullanıcı tarafından girilen ismi alıyoruz.
         response_user = requests.get(base_url + githubname) # Adresi get ile sorguluyoruz. 
-        response_repos = requests.get(base_url + githubname + "/repos") # Adreis get ile sorguluyoruz.
+        response_repos = requests.get(base_url + githubname + "/repos") # Adresi get ile sorguluyoruz.
 
         # Dönen değerleri json formatına çeviriyoruz.
         user_info = response_user.json() 
